@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Show the app-install QR code and phone instructions",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "CMRG app install QR code",
+      "actual deployed app URL sharing",
+      "Android and iPhone home-screen installation",
+      "PWA manifest and service worker",
+      "red and black CMRG brand"
+    ],
+    "description": "Verifies the workspace provides a QR code to open the deployed CMRG Data Collect PWA and device-specific home-screen instructions without Play Store distribution.",
+    "steps": [
+      "Open the main workspace on desktop",
+      "Find the Get CMRG Collect on your phone section",
+      "Scan the QR code with a phone camera",
+      "Follow the device-specific Add to Home Screen instructions"
+    ],
+    "expected": "The QR code points to the current app URL, installation instructions explain Android and iPhone steps, and the app uses CMRG red, black and white branding."
+  },
+  {
+    "name": "Create a project and share its QR access link",
+    "viewport": "desktop",
+    "covers": [
+      "project creation backend",
+      "questionnaire builder",
+      "enumerator access code",
+      "project-specific questionnaire QR"
+    ],
+    "description": "Verifies a manager can create a survey project and obtain a phone-access link and code.",
+    "steps": [
+      "Create a project with a title and at least one question",
+      "Save the project",
+      "Open the project share panel"
+    ],
+    "expected": "The project appears in the project list with its questions and a separate QR/share link plus enumerator access code."
+  },
+  {
+    "name": "Submit a field response with GPS and audio status",
+    "viewport": "mobile",
+    "covers": [
+      "enumerator access code validation",
+      "mobile questionnaire submission",
+      "GPS latitude and longitude capture",
+      "audio upload status",
+      "response persistence"
+    ],
+    "description": "Verifies an enumerator can open a shared project, submit answers, capture location, and see an accurate audio status.",
+    "steps": [
+      "Open the project share link on a phone-sized view",
+      "Enter the displayed enumerator access code",
+      "Answer the questionnaire and capture location; record audio if browser permission is available",
+      "Submit the response",
+      "Open the Situation Room"
+    ],
+    "expected": "The response appears in the Situation Room with coordinates when permission is granted and a truthful audio status."
+  },
+  {
+    "name": "Import an existing questionnaire",
+    "viewport": "desktop",
+    "covers": [
+      "JSON questionnaire import",
+      "CSV questionnaire import",
+      "questionnaire validation"
+    ],
+    "description": "Verifies a manager can import a supported questionnaire file and review imported questions before saving.",
+    "steps": [
+      "Open the import questionnaire control",
+      "Import a valid JSON or CSV questionnaire file",
+      "Review the imported question list"
+    ],
+    "expected": "Imported questions are shown for review and can be saved into a project; invalid files show a readable validation error."
+  },
+  {
+    "name": "Review and flag fieldwork in Situation Room",
+    "viewport": "desktop",
+    "covers": [
+      "submission monitoring",
+      "audio upload link and server-confirmed storage status",
+      "GPS coordinate review and Google Maps preview",
+      "flag and verify status updates"
+    ],
+    "description": "Verifies a manager can inspect submitted fieldwork and change its review status.",
+    "steps": [
+      "Open Situation Room for a project with a submission",
+      "Inspect its location and audio status",
+      "Mark the submission as flagged or verified"
+    ],
+    "expected": "The submission shows coordinates with a Google Maps preview, provides an interviewer audio-upload link, marks audio Uploaded only after server storage confirms success, and retains review status after refresh."
+  }
+]

@@ -1,0 +1,44 @@
+:root {
+  color-scheme: light;
+  --cmrg-red: #d71920;
+  --cmrg-black: #111111;
+  --cmrg-charcoal: #202020;
+  --cmrg-paper: #ffffff;
+  --cmrg-grey: #f3f3f3;
+}
+body { background: var(--cmrg-grey); color: var(--cmrg-black); }
+.sidebar { background: var(--cmrg-black); color: #eeeeee; }
+.brandmark { background: var(--cmrg-red); color: #ffffff; border-radius: 8px; }
+.brand small, .navlabel { color: #bcbcbc; }
+.workspace { background: #292929; color: #f1f1f1; }
+.nav { color: #d5d5d5; }
+.nav.active { background: #3a1719; color: #ffffff; box-shadow: inset 3px 0 var(--cmrg-red); }
+.navcount { background: var(--cmrg-red); color: #ffffff; }
+.secure { background: #252525; color: #ffffff; }
+.secure small { color: #d0d0d0; }
+.primary { background: var(--cmrg-red); color: #ffffff; box-shadow: none; }
+.primary:hover { background: #b71319; }
+.secondary { color: var(--cmrg-black); border-color: #d5d5d5; background: #ffffff; }
+.textbtn, .gps, .audiolink { color: var(--cmrg-red); }
+.pagehead h1, .panelhead h2, .modalhead h2, .formtitle h2 { color: var(--cmrg-black); }
+.eyebrow { color: var(--cmrg-red); }
+.stat, .panel { border-color: #e1e1e1; }
+.staticon.c0, .projecticon, .emptyicon, .importicon { background: #fcebed; color: var(--cmrg-red); }
+.c1 { background: #eeeeee; color: #222222; }
+.c2 { background: #f5f5f5; color: #444444; }
+.c3 { background: #fcebed; color: var(--cmrg-red); }
+.tag { background: #eeeeee; color: #222222; }
+.tag.green { background: #fcebed; color: #b71319; }
+.tag i, .dot, .live i { background: var(--cmrg-red); }
+.badge.bad { background: #fcebed; color: #b71319; }
+.appinstall-panel { background: linear-gradient(110deg, #ffffff 0%, #f6f6f6 100%); }
+.appinstall-copy h2 { color: var(--cmrg-black); }
+.appinstall-qr { border-color: #dedede; }
+.appinstall-qr b { color: var(--cmrg-red); }
+.install-help { background: #f5f5f5; color: #333333; }
+.accesscode { color: var(--cmrg-red); }
+.audio-upload-panel { border-top: 3px solid var(--cmrg-red); }
+@media (max-width: 720px) {
+  .sidebar { width: 68px; padding-left: 7px; padding-right: 7px; }
+  .brand { padding-left: 5px; padding-right: 5px; }
+}
